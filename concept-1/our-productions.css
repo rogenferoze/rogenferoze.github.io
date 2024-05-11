@@ -1,0 +1,65 @@
+.productions{
+    padding: 30px 75px;
+}
+.productions > h2{
+    padding: 10px 10px;
+    text-align: center;
+}
+.productions > p {
+    padding: 10px 10% 40px;
+    text-align: center;
+}
+
+.production-item{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.production-item > div {
+    margin: 30px;
+    min-width: 30%;
+}
+.prod-img-wrapper{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.273);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.production-item:hover > div > img{
+    scale: 1.1;
+}
+.production-item > div > img{
+    width: 100%;
+    transition: scale 500ms;
+}
+
+.production-item-card-1{
+    padding: 20px;
+    background-color: var(--accent-color-1);
+    border-radius: 15px;
+}
+.production-item-card-2{
+    padding: 20px;
+    background-color: var(--accent-color-4);
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 1000px){
+    .production-item{
+        display: block;
+    }
+    .production-item > div > h2, .production-item > div > p, .production-item > div > i{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .productions{
+        padding: 0;
+    }
+    .production-item{
+        border-radius: 0;
+        margin: 0;
+    }
+}

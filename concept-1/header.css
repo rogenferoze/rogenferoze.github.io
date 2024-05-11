@@ -1,0 +1,113 @@
+
+header{
+    padding: 50px 75px;
+    position: relative;
+    overflow: hidden;
+}
+.header-button-container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.menu-button{
+    padding: 0;
+    visibility: visible;
+    border-radius: 0;
+    background: none;
+    font-size: 50px;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+.menu-button:hover{
+    visibility: visible;
+    border-radius: 0;
+    background: none;
+    font-size: 50px;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+header > img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(100px) brightness(0.3);
+    scale: 1;
+    height: min-content;
+    transition: all 1s;
+}
+header > img:hover{
+    scale: 1.1;
+}
+header > section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header > section > div > h1{
+    color: var(--font-color-1);
+}
+header > section > div > p{
+    color: var(--font-color-2);
+}
+header > section > div > button{
+    background-color: var(--accent-color-1);
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: 1px none #000;
+    color: white;
+}
+header > section > button:hover{
+    background-color: var(--accent-color-2);
+}
+
+
+header > nav > ul {
+    display: flex;
+    list-style: none;
+    margin: 35px 0 0;
+    padding: 0;
+    overflow: hidden;
+}
+header > nav > ul > li{
+    padding: 10px 50px 10px 0px;
+}
+header > nav > ul > li > a{
+    text-decoration: none;
+    color: var(--link-color);
+}
+header > nav > ul > li > a:hover{
+    color: var(--link-color-hover);
+}
+
+@media only screen and (max-width: 1000px) {
+    header > nav > ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    header > nav > ul > li {
+        padding: 15px;
+    }
+    header > section > div > button{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    header{
+        padding: 50px 20px;
+    }
+    header > nav > ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+    }
+    header > section > div > button{
+        visibility: hidden;
+    }
+}

@@ -4,6 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concept 1</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./main-card.css">
+    <link rel="stylesheet" href="./book-service.css">
+    <link rel="stylesheet" href="./sample-pack.css">
+    <link rel="stylesheet" href="./our-productions.css">
+    <link rel="stylesheet" href="./footer.css">
 </head>
 <body>
     <header>
@@ -13,9 +19,24 @@
                 <h1>Soundwave Studios.</h1>
                 <p>By Rogen Feroze</p>
             </div>
-            <button>Contact us</button>
+            <div class="header-button-container">
+                <button>Contact us</button>
+                <button class="menu-button" onclick="openMenu()"> = </button>
+                <script>
+                    let isOpen = false
+                    function openMenu(){
+                        if (isOpen) {
+                            document.getElementById("menu-nav").style.height = "0px";
+                            isOpen = false;
+                        } else if (!isOpen) {
+                            document.getElementById("menu-nav").style.height = "min-content";
+                            isOpen = true;
+                        }
+                    }
+                </script>
+            </div>
         </section>
-        <nav><ul>
+        <nav><ul id="menu-nav">
             <li><a href="#">Home</a></li>
             <li><a href="#">Sample Packs</a></li>
             <li><a href="#">Portfolio</a></li>
@@ -34,6 +55,8 @@
             </div>
         </div>
         <br id="book-service">
+        <br>
+        <br>
         <br>
         <article class="book-service">
             <img src="https://png.pngtree.com/thumb_back/fw800/background/20230902/pngtree-a-recording-studio-has-music-equipment-and-keyboard-image_13160065.jpg" alt="">
@@ -65,66 +88,96 @@
             </div>
         </article>
         <br>
-        <br>
-        <br>
-        <br>
-        <article>
-            <h2>Sample Packs & Presets</h2>
-            <hr>
-            <div>
-                <section>
-                    <img src="" alt="">
-                    <h3>Sample Title</h3>
-                    <p>Short Description</p>
-                </section>
+        <article class="sample-pack">
+            <div class="sample-pack-title">
+                <h2>Sample Packs & Presets</h2>
+                <hr>
             </div>
-            <div>
-                <section>
-                    <img src="" alt="">
-                    <h3>Sample Title</h3>
+            <div class="sample-pack-content">
+                <div class="sample-pack-item-wrapper">
+                    <div>
+                        <img src="https://static.wixstatic.com/media/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg/v1/fill/w_506,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg" alt="">
+                    </div>
+                    <h3>Sci-Fi Sound Effects Collection</h3>
                     <p>Short Description</p>
-                </section>
-            </div>
-            <div>
-                <section>
-                    <img src="" alt="">
-                    <h3>Sample Title</h3>
+                </div>
+                <div class="sample-pack-item-wrapper">
+                    <div>
+                        <img src="https://static.wixstatic.com/media/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg/v1/fill/w_506,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg" alt="">
+                    </div>
+                    <h3>MicroFreak Ambience Pack</h3>
                     <p>Short Description</p>
-                </section>
+                </div>
+                <div class="sample-pack-item-wrapper">
+                    <div>
+                        <img src="https://static.wixstatic.com/media/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg/v1/fill/w_506,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg" alt="">
+                    </div>
+                    <h3>Retro Game Sound Effects Pack</h3>
+                    <p>Short Description</p>
+                </div>
+                <div class="sample-pack-item-wrapper">
+                    <div>
+                        <img src="https://static.wixstatic.com/media/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg/v1/fill/w_506,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg" alt="">
+                    </div>
+                    <h3>Nature Ambience Sound Pack</h3>
+                    <p>Short Description</p>
+                </div>
             </div>
         </article>
-        <article>
+        <br>
+        <br>
+        <article class="productions">
             <h2>Our Productions</h2>
             <p>Soundwave Studios is a full-service music production. We specialize in producing, mixing, and mastering great sounding tunes for all your music needs. Check out some of our recent productions to experience first-hand the superior sound quality we offer.</p>
-            <div>
+            <div class="productions-wrapper">
                 <section>
-                    <div><img src="" alt=""></div>
-                    <h3>Production title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda cum fugiat sequi mollitia dolores odio corporis praesentium rem molestiae nostrum commodi qui, ullam, porro id tempore, iure voluptas distinctio.</p>
+                    <div class="production-item production-item-card-1">
+                        <div class="prod-img-wrapper"><img src="./assets/freelance-page.webp" alt=""></div>
+                        <div>
+                            <h2>Freelancing in Fiverr.</h2>
+                            <i>September 2021 - Today</i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda cum fugiat sequi mollitia dolores odio corporis praesentium rem molestiae nostrum commodi qui, ullam, porro id tempore, iure voluptas distinctio.</p>
+                        </div>
+                    </div>
                 </section>
-            </div>
-            <div>
+                <br>
                 <section>
-                    <div><img src="" alt=""></div>
-                    <h3>Production title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda cum fugiat sequi mollitia dolores odio corporis praesentium rem molestiae nostrum commodi qui, ullam, porro id tempore, iure voluptas distinctio.</p>
+                    <div class="production-item production-item-card-2">
+                        <div>
+                            <h2>Sound Designer for LAGCAT Studio.</h2>
+                            <i>January 24, 2023</i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda cum fugiat sequi mollitia dolores odio corporis praesentium rem molestiae nostrum commodi qui, ullam, porro id tempore, iure voluptas distinctio.</p>
+                        </div>
+                        <div class="prod-img-wrapper"><img src="./assets/indie-game-banner.webp" alt=""></div>
+                    </div>
                 </section>
-            </div>
-            <div>
+                <br>
                 <section>
-                    <div><img src="" alt=""></div>
-                    <h3>Production title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda cum fugiat sequi mollitia dolores odio corporis praesentium rem molestiae nostrum commodi qui, ullam, porro id tempore, iure voluptas distinctio.</p>
+                    <div class="production-item production-item-card-1">
+                        <div class="prod-img-wrapper"><img src="./assets/news-spotify.webp" alt=""></div>
+                        <div>
+                            <h2>Up to 100,000 Streams on Spotify.</h2>
+                            <i>October 2022 - Today</i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda cum fugiat sequi mollitia dolores odio corporis praesentium rem molestiae nostrum commodi qui, ullam, porro id tempore, iure voluptas distinctio.</p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </article>
     </main>
+    <div class="footer-effect"><div></div></div>
     <footer>
-        <h3>Soundwave Studios.</h3>
-        <p>&copy;soundwavestudios2024</p>
-        <h3>Contact us</h3>
-        <a href="tel:+6282121523643">+6282121523643</a>
-        <a href="mailto:rogen.freelance@gmail.com">rogen.freelance@gmail.com</a>
+        <div>
+            <h3>Soundwave Studios.</h3>
+            <p>&copy;soundwavestudios2024</p>
+        </div>
+        <div class="contact-nav">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="tel:+6282121523643">+6282121523643</a></li>
+                <li><a href="mailto:rogen.freelance@gmail.com">rogen.freelance@gmail.com</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,77 @@
+
+.book-service{
+    padding: 75px 75px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-height: 250px;
+    justify-content: space-between;
+    position: relative;
+}
+.book-service > img{
+    position: absolute;
+    z-index: -1;
+    top: -300px;
+    left: 0;
+    width: 100%;
+    filter: blur(100px) brightness(0.3);
+}
+.book-service > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.book-service > div > div{
+    margin: 40px;
+}
+.book-service > div > div > section{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.book-service > div > div > section > h3{
+    text-align: center;
+}
+.book-service > div > div > section > p{
+    text-align: center;
+    margin: 25px 0;
+}
+.book-service > div > div > section > button{
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--accent-color-1);
+}
+.book-service > div > div > section > button:hover{
+    background-color: var(--accent-color-3);
+}
+.book-service > div > hr{
+    height: 200px;
+    align-self: center;
+    border: 1px solid;
+    border-color: var(--sub-color-1);
+}
+
+@media only screen and (max-width: 1000px){
+    .book-service > div{
+        flex-flow: column;
+    }
+    .book-service > div > div > section{
+        align-items: start;
+        justify-content: start;
+    }
+    .book-service > div > div > section > p{
+        text-align: start;
+    }
+    .book-service > div > hr{
+        height: 0;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .book-service{
+        padding: 75px 10px;
+    }
+}
