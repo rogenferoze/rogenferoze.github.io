@@ -24,3 +24,38 @@
 body{
     background-color: var(--main-color);
 }
+
+a, button{
+    cursor: pointer;
+}
+
+#up-icon{
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    z-index: 1;
+    width: 100vw;
+    height: 20px;
+    transition: opacity 400ms;
+}
+#up-icon > div > img{
+    scale: 0.3;
+}
+#up-icon > div{
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--sub-color-1);
+    top: 0;
+    left: 50%;
+    position: absolute;
+    transition: background-color 400ms, opacity 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#up-icon:hover > div{
+    opacity: 1;
+    background-color: var(--sub-color-2);
+}

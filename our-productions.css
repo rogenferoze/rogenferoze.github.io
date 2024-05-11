@@ -30,6 +30,7 @@
 }
 .production-item > div > img{
     width: 100%;
+    scale: 1.02;
     transition: scale 500ms;
 }
 
