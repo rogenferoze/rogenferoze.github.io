@@ -37,13 +37,14 @@
     text-align: center;
     margin: 25px 0;
 }
-.book-service > div > div > section > button{
+.book-service > div > div > section > a{
     padding: 10px 30px;
     border-radius: 50px;
     border: none;
     background-color: var(--accent-color-1);
+    text-decoration: none;
 }
-.book-service > div > div > section > button:hover{
+.book-service > div > div > section > a:hover{
     background-color: var(--accent-color-3);
 }
 .book-service > div > hr{

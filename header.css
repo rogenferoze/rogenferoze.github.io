@@ -52,12 +52,15 @@ header > section > div > h1{
 header > section > div > p{
     color: var(--font-color-2);
 }
-header > section > div > button{
+header > section > div > button,
+header > section > div > a
+{
     background-color: var(--accent-color-1);
     padding: 10px 20px;
     border-radius: 100px;
     border: 1px none #000;
     color: white;
+    text-decoration: none;
 }
 header > section > button:hover{
     background-color: var(--accent-color-2);
