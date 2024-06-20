@@ -33,6 +33,9 @@ footer {
     footer > div:first-child{
         padding: 0 0 40px;
     }
+    .contact-nav {
+        margin-bottom: 170px;
+    }
     .contact-nav > h3 {
         text-align: left;
     }

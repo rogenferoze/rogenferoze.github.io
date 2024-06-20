@@ -22,7 +22,9 @@
     align-items: center;
 }
 .book-service > div > div{
+    flex-grow: 1;
     margin: 40px;
+    max-width: 28%;
 }
 .book-service > div > div > section{
     display: flex;
@@ -57,6 +59,9 @@
 @media only screen and (max-width: 1000px){
     .book-service > div{
         flex-flow: column;
+    }
+    .book-service > div > div {
+        max-width: max-content;
     }
     .book-service > div > div > section{
         align-items: start;

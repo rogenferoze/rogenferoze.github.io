@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./sample-pack.css">
     <link rel="stylesheet" href="./our-productions.css">
     <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./audio-player-wrapper.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -46,12 +47,35 @@
         </section>
         <nav><ul id="menu-nav">
             <li><a href="#">Home</a></li>
-            <li><a href="#sample-pack">Sample Packs</a></li>
+            <li><a href="#music-portfolio">Music Portfolio</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#book-service">Request Gigs</a></li>
         </ul></nav>
     </header>
     <main>
+        <script src="audioPlayer/audio_player.js"></script>
+        <script type="module" src="playlistPlayer.js"></script>
+        <div id="audio-player-wrapper">
+            <script>
+                let isCollapsed = false;
+                let previousHeight = "0px";
+                function expandCollapse() {
+                    if (isCollapsed) {
+                        isCollapsed = false;
+                        document.getElementById("minimize-maximize").style.backgroundImage = "url('collapse.png')";
+                        previousHeight = document.querySelector("audio-player").offsetHeight;
+                        document.getElementById("audio-player-wrapper").style.bottom = `30px`;
+                    } else {
+                        isCollapsed = true;
+                        document.getElementById("minimize-maximize").style.backgroundImage = "url('expand.png')";
+                        previousHeight = document.querySelector("audio-player").offsetHeight;
+                        document.getElementById("audio-player-wrapper").style.bottom = `-${previousHeight}px`;
+                    }
+                }
+            </script>
+            <button id="minimize-maximize" onclick="expandCollapse()"></button>
+            <audio-player></audio-player>
+        </div>
         <div class="main-card">
             <article>
                 <h2>High-Quality Audio Content</h2>
@@ -73,7 +97,7 @@
                 <div>
                     <section>
                         <h3>Ghost Production</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad maxime aliquid officia, at possimus architecto neque. Quibusdam aspernatur nesciunt libero natus blanditiis illo neque repudiandae. Aperiam eos magni dolor commodi.</p>
+                        <p>Let Soundwave Studios bring your music to life with our Ghost Production service. Our team will work with you from scratch to finish, creating high-quality, professional tracks that match your style and vision. Whether you're a solo artist or a band, we'll bring your musical ideas to reality.</p>
                         <a href="mailto:rogen.freelance@gmail.com">Book Now</a>
                     </section>
                 </div>
@@ -81,57 +105,63 @@
                 <div>
                     <section>
                         <h3>Game & Film sound design</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad maxime aliquid officia, at possimus architecto neque. Quibusdam aspernatur nesciunt libero natus blanditiis illo neque repudiandae. Aperiam eos magni dolor commodi.</p>
+                        <p>Immerse yourself in the world of game and film sound design with Soundwave Studios. Our team of experts will work closely with you to create the perfect audio experience for your project, whether it's a video game or a film. We specialize in creating unique and immersive soundscapes that will bring your project to life. Let us take your project to the next level with our top-notch game and film sound design services.</p>
                         <a href="mailto:rogen.freelance@gmail.com">Book Now</a>
                     </section>
                 </div>
                 <hr>
                 <div>
                     <section>
-                        <h3>Mixing & Marketing</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad maxime aliquid officia, at possimus architecto neque. Quibusdam aspernatur nesciunt libero natus blanditiis illo neque repudiandae. Aperiam eos magni dolor commodi.</p>
+                        <h3>Mixing & Mastering</h3>
+                        <p>Take your music to the next level with Soundwave Studios' mixing and mastering service. Our professional engineers have the skills and expertise to enhance your music to industry standard, ensuring it sounds its best across all platforms. Get your music ready for the big time with Soundwave Studios.
+                        </p>
                         <a href="mailto:rogen.freelance@gmail.com">Book Now</a>
                     </section>
                 </div>
             </div>
         </article>
+        <br id="audio-portfolio">
+        <div class="audio-portfolio-section">
+            
+        </div>
+        <br id="music-portfolio">
+        <article class="sample-pack">
+            <div class="sample-pack-title">
+                <h2>Music Portfolio</h2>
+                <hr>
+            </div>
+            <div id="audio-playlist" playlistName="Music Portfolio">
+                <button class="audio-container">
+                    <img src="Songs copy/Nightcall.jpg" alt="">
+                    <source src="Songs copy/Nightcall.mp3">
+                    <h3>Nightcall</h3>
+                    <p>Kavinsky</p>
+                </button>
+                <button class="audio-container">
+                    <img src="Songs copy/Peace and Tranquility.jpg" alt="">
+                    <source src="Songs copy/Peace and Tranquility.mp3">
+                    <h3>Peace and Tranquility</h3>
+                    <p></p>
+                </button>
+            </div>
+        </article>
         <br id="sample-pack">
         <article class="sample-pack">
             <div class="sample-pack-title">
-                <h2>Sample Packs & Presets</h2>
+                <h2>Sample Pack</h2>
                 <hr>
             </div>
-            <div class="sample-pack-content">
-                <div class="sample-pack-item-wrapper">
-                    <div>
-                        <img src="https://static.wixstatic.com/media/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg/v1/fill/w_506,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg" alt="">
-                    </div>
-                    <h3>Sci-Fi Sound Effects Collection</h3>
-                    <p>Short Description</p>
-                </div>
-                <div class="sample-pack-item-wrapper">
-                    <div>
-                        <img src="https://static.wixstatic.com/media/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg/v1/fill/w_506,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg" alt="">
-                    </div>
-                    <h3>MicroFreak Ambience Pack</h3>
-                    <p>Short Description</p>
-                </div>
-                <div class="sample-pack-item-wrapper">
-                    <div>
-                        <img src="https://static.wixstatic.com/media/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg/v1/fill/w_506,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg" alt="">
-                    </div>
-                    <h3>Retro Game Sound Effects Pack</h3>
-                    <p>Short Description</p>
-                </div>
-                <div class="sample-pack-item-wrapper">
-                    <div>
-                        <img src="https://static.wixstatic.com/media/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg/v1/fill/w_506,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_dcc9b7f9c78141bdb3147fc595f3760e~mv2.jpg" alt="">
-                    </div>
-                    <h3>Nature Ambience Sound Pack</h3>
-                    <p>Short Description</p>
-                </div>
+            <div id="audio-playlist" playlistName="Music Portfolio">
+                <button class="audio-container">
+                    <img src="Songs copy/Wham Bam Shang-A-Lang.jpg" alt="">
+                    <source src="Songs copy/Wham Bam Shang-A-Lang.mp3">
+                    <h3>Wham Bam Shang-A-Lang</h3>
+                    <p>Silver</p>
+                </button>
             </div>
         </article>
+        <br>
+        <br>
         <br id="portfolio">
         <br>
         <article class="productions">

@@ -9,13 +9,16 @@ header{
     justify-content: right;
     align-items: center;
 }
+.header-button-container > a {
+    text-align: center;
+}
 .menu-button{
     padding: 0;
     visibility: visible;
     border-radius: 0;
     background: none;
     font-size: 50px;
-    margin-left: 30px;
+    margin-left: 10px;
     padding-bottom: 10px;
 }
 .menu-button:hover{
@@ -23,7 +26,6 @@ header{
     border-radius: 0;
     background: none;
     font-size: 50px;
-    margin-left: 30px;
     padding-bottom: 10px;
 }
 header > img{
@@ -56,6 +58,7 @@ header > section > div > button,
 header > section > div > a
 {
     background-color: var(--accent-color-1);
+    min-width: max-content;
     padding: 10px 20px;
     border-radius: 100px;
     border: 1px none #000;
