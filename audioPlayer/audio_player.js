@@ -14,7 +14,7 @@ class AudioPlayer extends HTMLElement {
                     color: white;
                 }
                 #audio-player-wrapper {
-                    width: min-content;
+                    width: 300px;
                     padding: 21px;
                     background-color: hsla(0,0%,80%,0.4);
                     backdrop-filter: blur(16px);
@@ -30,6 +30,8 @@ class AudioPlayer extends HTMLElement {
                     border: 1px solid hsl(0,0%,50%);
                     border-radius: 8px;
                     box-shadow: 0 3px 20px hsla(0,0%,0%,0.25);
+                    position: absolute;
+                    visibility: collapse;
                 }
                 #audio-controls > input {
                     margin: 10px 0;
@@ -74,7 +76,7 @@ class AudioPlayer extends HTMLElement {
                     }
                     #audio-player-wrapper {
                         padding: 20px 20px;
-                        width: 85%;
+                        width: 85vw;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;

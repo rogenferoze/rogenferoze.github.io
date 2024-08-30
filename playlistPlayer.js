@@ -9,10 +9,10 @@ for (let buttons of playButtons) {
         let playlistName = parent.getAttribute("playlistName");
         let playlist = new AudioPlaylist(playlistName);
         for (let child of parent.children) {
-            let songCover = child.children[0].src;
-            let songSource = child.children[1].src;
-            let songName = child.children[2].innerHTML;
-            let songArtist = child.children[3].innerHTML;
+            let songCover = "none"
+            let songSource = child.children[0].children[0].src;
+            let songName = child.children[0].children[1].innerHTML;
+            let songArtist = child.children[0].children[2].innerHTML;
             playlist.addSong(new AudioData(songName,songArtist,songSource,songCover));
         }
         document.querySelector('audio-player').playlist = playlist;
