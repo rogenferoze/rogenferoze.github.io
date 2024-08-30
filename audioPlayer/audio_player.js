@@ -58,7 +58,7 @@ class AudioPlayer extends HTMLElement {
                 }
                 #audio-play-button {
                     background: none;
-                    background-image: url("pause.png");
+                    background-image: url("play.png");
                 }
                 #audio-previous {
                     background: none;
@@ -76,7 +76,7 @@ class AudioPlayer extends HTMLElement {
                     }
                     #audio-player-wrapper {
                         padding: 20px 20px;
-                        width: 85vw;
+                        width: 80vw;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -280,7 +280,14 @@ class AudioPlayer extends HTMLElement {
         this.audioData.children[1].innerHTML = this.playlist.songList[playlistIndex].name;
         this.audioData.children[2].innerHTML = this.playlist.songList[playlistIndex].artist;
         this.audioPlayer.src = this.playlist.songList[playlistIndex].audioSource;
-        this.audioPlayer.play();
+        let promise = this.audioPlayer.play();
+        if (promise !== undefined){
+            promise.then(_ => {
+                this.audioPlayButton.style.backgroundImage = "url('pause.png')";
+            }).catch(error => {
+                this.audioPlayButton.style.backgroundImage = "url('play.png')";
+            })
+        }
     }
 }
 

@@ -175,7 +175,7 @@
         <br id="sample-pack">
         <article class="sample-pack">
             <div class="sample-pack-title">
-                <h2>Sample Pack. <button type="submit" onclick="window.open('./SamplePack/MicroFreak Sample Pack.zip')">Download</button> </h2>
+                <h2>MicroFreak Sample Pack. <button type="submit" onclick="window.open('./SamplePack/MicroFreak Sample Pack.zip')">Download</button> </h2>
                 <hr>
             </div>
             <div id="audio-playlist" playlistName="Sample Portfolio">
@@ -320,7 +320,8 @@
     </footer>
     <script>
         window.onload = function(){
-            document.getElementById("first-song").click()
+            document.getElementById("first-song").click();
+            document.querySelector('audio-player').playSong(0);
         }
     </script>
 </body>

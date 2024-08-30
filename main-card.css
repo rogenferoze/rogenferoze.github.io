@@ -64,6 +64,9 @@ main > .main-card{
         padding: 10vw;
     }
     .main-card > div{
-        width: 100vw;
+        min-width: 100vw;
+        min-height: 60vw;
+        width: min-content;
+        height: min-content;
     }
 }
