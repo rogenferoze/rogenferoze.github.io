@@ -24,6 +24,3 @@ for (let buttons of playButtons) {
         document.querySelector('audio-player').playSong(myIndex);
     }
 }
-
-document.querySelector('audio-player').playlist = new AudioPlaylist("Random", new AudioData("ANAHEIM", "Rogen", "./songs/ANAHEIM new master.wav"))
-document.querySelector('audio-player').playSong(0);

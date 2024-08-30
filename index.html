@@ -48,6 +48,7 @@
         <nav><ul id="menu-nav">
             <li><a href="#">Home</a></li>
             <li><a href="#music-portfolio">Music Portfolio</a></li>
+            <li><a href="#sample-pack">Sample Pack</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
         </ul></nav>
     </header>
@@ -101,7 +102,7 @@
             <div id="audio-playlist" playlistName="Music Portfolio">
                 <button class="audio-container">
                     <div>
-                        <source src="songs\With You.wav">
+                        <source src="songs\With You.wav" id="first-song">
                         <h3>With You</h3>
                         <p>Peferd Da Costa, Rogen Feroze</p>
                     </div>
@@ -174,18 +175,88 @@
         <br id="sample-pack">
         <article class="sample-pack">
             <div class="sample-pack-title">
-                <h2>Sample Pack.</h2>
+                <h2>Sample Pack. <button type="submit" onclick="window.open('./SamplePack/MicroFreak Sample Pack.zip')">Download</button> </h2>
                 <hr>
             </div>
             <div id="audio-playlist" playlistName="Sample Portfolio">
                 <button class="audio-container">
                     <div>
-                        <source src="Songs copy/Wham Bam Shang-A-Lang.mp3">
-                        <h3>Wham Bam Shang-A-Lang</h3>
-                        <p>Silver</p>
+                        <source src="SamplePack\Arp\001_NK_Arpeggio_Fmaj_120.wav">
+                        <h3>001 NK Arpeggio Fmaj 120</h3>
+                        <p>Rogen Feroze</p>
                     </div>
                     <p>
-                        aa:bb
+                        00:12
+                    </p>
+                </button>
+                <button class="audio-container">
+                    <div>
+                        <source src="SamplePack\Bass\219_DB_Bass_Cmaj_100.wav">
+                        <h3>219 DB Bass Cmaj 100</h3>
+                        <p>Rogen Feroze</p>
+                    </div>
+                    <p>
+                        00:19
+                    </p>
+                </button>
+                <button class="audio-container">
+                    <div>
+                        <source src="SamplePack\Bass\219_DB_Bass_C_OneShot.wav">
+                        <h3>219 DB Bass C One Shot</h3>
+                        <p>Rogen Feroze</p>
+                    </div>
+                    <p>
+                        00:06
+                    </p>
+                </button>
+                <button class="audio-container">
+                    <div>
+                        <source src="SamplePack\Bass\219_DB_Bass_G_OneShot.wav">
+                        <h3>219 DB Bass G One Shot</h3>
+                        <p>Rogen Feroze</p>
+                    </div>
+                    <p>
+                        00:06
+                    </p>
+                </button>
+                <button class="audio-container">
+                    <div>
+                        <source src="SamplePack\Pads\214_Gaia_Pad_Cmaj_120.wav">
+                        <h3>214 Gaia Pad Cmaj 120</h3>
+                        <p>Rogen Feroze</p>
+                    </div>
+                    <p>
+                        00:32
+                    </p>
+                </button>
+                <button class="audio-container">
+                    <div>
+                        <source src="SamplePack\Pads\273_Good_Pad_Amin_100.wav">
+                        <h3>273 Good Pad Amin 100</h3>
+                        <p>Rogen Feroze</p>
+                    </div>
+                    <p>
+                        00:48
+                    </p>
+                </button>
+                <button class="audio-container">
+                    <div>
+                        <source src="SamplePack\Pads\273_Good_Pad_F_OneShot.wav">
+                        <h3>273 Good Pad F One Shot</h3>
+                        <p>Rogen Feroze</p>
+                    </div>
+                    <p>
+                        00:20
+                    </p>
+                </button>
+                <button class="audio-container">
+                    <div>
+                        <source src="SamplePack\Perc\218_MS_Perc_120.wav">
+                        <h3>218 MS Perc 120</h3>
+                        <p>Rogen Feroze</p>
+                    </div>
+                    <p>
+                        00:06
                     </p>
                 </button>
             </div>
@@ -247,5 +318,10 @@
             </ul>
         </div>
     </footer>
+    <script>
+        window.onload = function(){
+            document.getElementById("first-song").click()
+        }
+    </script>
 </body>
 </html>
